@@ -4,6 +4,25 @@
     <link rel="stylesheet" href="laikaweb.css">
   </head>
   <body>
-    <img src="otter.png" alt="otter.png">
+    <div class="all-wrap">
+      <img src="otter.png" alt="otter.png">
+      <a href="#">NO ME PULSES!</a>
+      <div class="video-wrap hide">
+        <video autoplay loop muted>
+          <source src="otter.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <script>
+      var video = document.querySelector(".video-wrap");
+      var imagen =  document.querySelector("img");
+      var boton = document.querySelector('a');
+      boton.onclick = () => {
+          event.preventDefault();
+          video.classList.toggle('hide');
+          imagen.classList.toggle('hide');
+          boton.classList.toggle('hide');
+      };
+    </script>
   </body>
 </html>
